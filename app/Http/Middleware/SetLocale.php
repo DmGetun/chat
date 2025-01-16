@@ -16,7 +16,7 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next): Response
     {
-        App::setLocale('ru');
+        //App::setLocale('ru');
         return $next($request);
     }
 }

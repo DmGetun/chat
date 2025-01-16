@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('chats', function (Blueprint $table) {
             $table->foreignUuid('image_id')
+                ->nullable()
                 ->references('id')
                 ->on('files')
                 ->onDelete('set null');

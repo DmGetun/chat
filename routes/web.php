@@ -30,7 +30,7 @@ Route::post('/user/theme', function(\Illuminate\Http\Request $request) {
 })->name('set-theme');
 
 Route::prefix('chat')->group(function() {
-    Route::get('/index', [ChatController::class, 'index']);
+    Route::get('/index', \App\Livewire\Chat::class);
 });
 
 require __DIR__.'/auth.php';

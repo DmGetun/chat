@@ -16,8 +16,8 @@ return new class extends Migration
             $table->unique('id');
 
             $table->text('text');
-            $table->boolean('is_pinned');
-            $table->boolean('is_visible');
+            $table->boolean('is_pinned')->default(false);
+            $table->boolean('is_visible')->default(true);
             $table->timestamps();
             $table->softDeletes();
 
